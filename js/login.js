@@ -1,10 +1,9 @@
-
 document.getElementById('login-btn')
     .addEventListener('click', function (event) {
         // nicher method er jnno log in form e info diye login e click korele ta default howa theke prevent korbe
         event.preventDefault();
-        const accountNumber = document.getElementById('account-number').value
-        const accountPin = document.getElementById('account-pin').value
+        const accountNumber = document.getElementById('account-number').value;
+        const accountPin = document.getElementById('cashout-pin').value;
         //pin ke int number e convert kora hoyeche cause pin er input type text dewa ache 
         const convertedPin = parseInt(accountPin)
 
