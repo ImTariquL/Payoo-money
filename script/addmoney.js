@@ -26,9 +26,9 @@ document.getElementById('add-money')
                 const container = document.getElementById('transaction-container');
 
                 const div = document.createElement('div');
-                div.classList.add('bg-gray-400')
+                div.classList.add('bg-white','p-4','m-4','rounded-xl')
                 div.innerHTML= `
-                <h1 class="text-yellow-200"> Cashin ${amount} tk from</h1>
+                <h1 class="text-blue-800 "> Cashin ${amount} tk from</h1>
                 <h1> ${accountNumber} </h1>
                 <p> with ${selectedBank}</p>
 

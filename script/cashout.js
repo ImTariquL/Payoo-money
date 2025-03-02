@@ -26,8 +26,9 @@ document.getElementById('cash-out')
                 const container = document.getElementById('transaction-container');
 
                 const p = document.createElement('p');
+                p.classList.add('bg-white','p-4','m-4','rounded-xl')
                 p.innerText= `
-                cashout ${amount} from ${accountNumber} account
+                cashout ${amount} tk from ${accountNumber} number
 
                 `
                 container.appendChild(p)
