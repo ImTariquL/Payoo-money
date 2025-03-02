@@ -1,7 +1,7 @@
 document.getElementById('add-money')
     .addEventListener('click', function (event) {
         event.preventDefault();
-        
+
         const amount = document.getElementById('account-amount').value
         // amount as a string hisabe ase karon input field string return kore  tai float e convert kora hocche
         const convertedAmount = parseFloat(amount)

@@ -22,13 +22,13 @@
                 </div>
                 <div class="flex items-center">
                     <button class="btn items-center">Logout</button>
-                </div>
+                </div>git branch -M main
             </nav>
 
-            <section  class="mt-10">
+            <section class="mt-10">
                 <div class="pl-2">
                     <h1 class="text-2xl font-bold mb-2">Welcome to Payoo!</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sunt!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sunt!</p>
                 </div>
                 <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
                     <div id="add-money-box" class="box border p-4 text-center rounded-sm ">
@@ -51,7 +51,7 @@
                         <img class="w-8 mx-auto" src="./assets/payoo-mfs/wallet 1.png" alt="">
                         <h3>Get Bonus</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm ">
+                    <div id="transaction-box" class="box border p-4 text-center rounded-sm ">
                         <img class="w-8 mx-auto" src="./assets/payoo-mfs/wallet 1.png" alt="">
                         <h3>Transaction History</h3>
                     </div>
@@ -60,68 +60,85 @@
 
             <section id="addmoney">
                 <h1 class="text-2xl ml-1 font-bold">Add Money</h1>
-                
+
                 <div class="">
                     <div class="hero-content flex-col lg:flex-row-reverse">
-                      <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                            <legend>Select Bank</legend>
-                            <select class="select">
-                                <option disabled selected>Select Bank</option>
-                                <option value="Bkash">Bkash</option>
-                                <option value="Nagad">Nagad</option>
-                                <option value="DBBL">DBBL</option>
-                              </select>
-                          <fieldset class="fieldset">
-                            <label  class="fieldset-label">Account Number</label>
-                            <input id="account" value="01703301147" type="number" class="input" placeholder="Type Account Number" required />
-                            <label  class="fieldset-label">Amount </label>
-                            <input id="account-amount" type="number" class="input" placeholder="Type Your amount" required />
-                            <label  class="fieldset-label">PIN</label>
-                            <input id="account-pin" value="1234" type="text" class="input" placeholder="Enter PIN" required />
-                            <div><a class="link link-hover">Forgot Pin?</a></div>
-                            <button id="add-money" class="btn btn-neutral bg-blue-700 mt-4">Add Money</button>
-                          </fieldset>
-                        </form>
-                      </div>
+                        <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <legend>Select Bank</legend>
+                                <select id="allbank" class="select">
+                                    <option disabled selected>Select Bank</option>
+                                    <option value="Bkash">Bkash</option>
+                                    <option value="Nagad">Nagad</option>
+                                    <option value="DBBL">DBBL</option>
+                                </select>
+                                <fieldset class="fieldset">
+                                    <label class="fieldset-label">Account Number</label>
+                                    <input id="account" value="01703301147" type="number" class="input"
+                                        placeholder="Type Account Number" required />
+                                    <label class="fieldset-label">Amount </label>
+                                    <input id="account-amount" type="number" class="input"
+                                        placeholder="Type Your amount" required />
+                                    <label class="fieldset-label">PIN</label>
+                                    <input id="account-pin" value="1234" type="text" class="input"
+                                        placeholder="Enter PIN" required />
+                                    <div><a class="link link-hover">Forgot Pin?</a></div>
+                                    <button id="add-money" class="btn btn-neutral bg-blue-700 mt-4">Add Money</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                  </div>
+                </div>
             </section>
             <section id="cashout">
                 <h1 class="text-2xl ml-1 font-bold">Cash-Out</h1>
-                
+
                 <div class="">
                     <div class="hero-content flex-col lg:flex-row-reverse">
-                      <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                          <fieldset class="fieldset">
-                            <label  class="fieldset-label">Agent Number</label>
-                            <input id="cashout-number" value="01703301147" type="number" class="input" placeholder="Type Account Number" required />
-                            <label  class="fieldset-label">Amount </label>
-                            <input id="cashout-amount" type="number" class="input" placeholder="Type Your amount" required />
-                            <label  class="fieldset-label">PIN</label>
-                            <input id="cashout-pin" value="1234" type="text" class="input" placeholder="Enter PIN" required />
-                            <div><a class="link link-hover">Forgot Pin?</a></div>
-                            <button id="cash-out" class="btn btn-neutral bg-blue-700 mt-4">Cash-Out</button>
-                          </fieldset>
-                        </form>
-                      </div>
+                        <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <fieldset class="fieldset">
+                                    <label class="fieldset-label">Agent Number</label>
+                                    <input id="cashout-number" value="01703301147" type="number" class="input"
+                                        placeholder="Type Account Number" required />
+                                    <label class="fieldset-label">Amount </label>
+                                    <input id="cashout-amount" type="number" class="input"
+                                        placeholder="Type Your amount" required />
+                                    <label class="fieldset-label">PIN</label>
+                                    <input id="cashout-pin" value="1234" type="text" class="input"
+                                        placeholder="Enter PIN" required />
+                                    <div><a class="link link-hover">Forgot Pin?</a></div>
+                                    <button id="cash-out" class="btn btn-neutral bg-blue-700 mt-4">Cash-Out</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                  </div>
+                </div>
             </section>
+
+            <section id="transaction-history">
+                <h1 class="text-3xl font-bold text-red-400 text-center mt-5">Transaction-History</h1>
+                <div id="transaction-container">
+
+                </div>
+
+            </section>
+
         </header>
     </section>
-    
+
     <!-- below 3 file are ignored cause its not reusable and function based -->
     <!-- <script src="./js/add-money.js"></script> -->
     <!-- <script src="./js/toggle.js"></script> -->
     <!-- <script src="./js/cashout.js"></script> -->
 
-    
+
     <!-- below 3 file are allowed cause its reusable and function based -->
     <script src="./script/toggle.js"></script>
     <script src="./script/utilities.js"></script>
-     <script src="./script/addmoney.js"></script>
+    <script src="./script/addmoney.js"></script>
+    <script src="./script/cashout.js"></script>
+    <script src="./script/transaction-history.js"></script>
 </body>
 
 </html>
